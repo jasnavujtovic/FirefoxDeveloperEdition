@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:300,400,600,700,900&display=swap');
+
+:root {
+    --fontPrimary:'Inter', sans-serif;
+    --fontColor: #20123a;
+    --plava: #0060df;
+    --buttonHover: #0250bb;
+    --tamnoPlava: #08204e;
+    --bela: #fff;
+    --transition: .4s ease;
+}
+
+/********************
+BASIC STYLES
+********************/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fontPrimary);
+    font-size: 16px;
+    color: var(--fontColor);
+    margin-top: 30px;
+}
