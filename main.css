@@ -3,10 +3,10 @@
 :root {
     --fontPrimary:'Inter', sans-serif;
     --fontColor: #20123a;
-    --plava: #0060df;
+    --blue: #0060df;
     --buttonHover: #0250bb;
-    --tamnoPlava: #08204e;
-    --bela: #fff;
+    --darkBlue: #08204e;
+    --white: #fff;
     --transition: .4s ease;
 }
 
@@ -23,5 +23,103 @@ body {
     font-family: var(--fontPrimary);
     font-size: 16px;
     color: var(--fontColor);
-    margin-top: 30px;
 }
+.container {
+    width: 80%;
+    margin: auto;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+/********************
+nav
+********************/
+nav {
+    color: var(--fontColor);
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+    background-color: var(--white);
+    box-shadow: 1px 1px 4px rgb(150, 150, 150);
+}
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li {
+    display: inline-block;
+    margin-right: 40px;
+}
+nav img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+nav ul {
+    flex: 0 0 60%;
+    position: relative;
+}
+nav .logo {
+    font-size: 1.2rem;
+    flex: 0 0 12%;
+}
+nav button{
+    flex: 0 0 20%;
+    border: none;
+    border: 2px solid var(--buttonHover);
+    border-radius: 3px;
+    padding: 5px 0;
+    color: var(--buttonHover);
+    font-weight: bold;
+    background-color: var(--white);
+    font-size: .9rem;
+    transition: var(--transition);
+    cursor: pointer;
+}
+nav button:hover {
+    color: var(--white);
+    background-color: var(--buttonHover);
+}
+nav a:hover{
+    text-decoration: underline;
+    color: black;
+}
+/* dropdown */
+.dropDown {
+    position: absolute;
+    display: flex;
+    background-color: var(--white);
+    box-shadow: 1px 1px 12px rgb(184, 184, 184);
+    border-radius: 10px;
+    padding: 20px;
+    width: 500px;
+    top: 55px;
+}
+.dropDown ul {
+    flex: 0 0 0;
+}
+.dropDown ul li {
+    width: 220px;
+    margin-right: 20px;
+}
+.dropDown li {
+    margin-bottom: 20px;
+    padding: 5px;
+}
+.dropDown li:hover {
+    background-color: rgb(243, 243, 243);
+    padding: 5px;
+    border-radius: 4px;
+}
+.dropDown img {
+    margin-right: 5px;
+}
+.dropDown p {
+    margin: 10px 0 20px 40px;
+}
+
