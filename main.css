@@ -5,9 +5,10 @@
     --fontColor: #20123a;
     --blue: #0060df;
     --buttonHover: #0250bb;
-    --darkBlue: #08204e;
+    --darkBlue: #081e48;
     --white: #fff;
     --transition: .4s ease;
+    --padding: 100px 0;
 }
 
 /********************
@@ -25,7 +26,7 @@ body {
     color: var(--fontColor);
 }
 .container {
-    width: 80%;
+    width: 85%;
     margin: auto;
 }
 a {
@@ -33,6 +34,21 @@ a {
 }
 li {
     list-style: none;
+}
+.btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+    color: var(--white);
+    background: var(--blue);
+    border:none;
+    border-radius: 4px;
+    transition: var(--transition);
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.btn:hover {
+    background: var(--buttonHover);
 }
 /********************
 nav
@@ -89,27 +105,39 @@ nav a:hover{
     text-decoration: underline;
     color: black;
 }
-/* dropdown */
+/********************
+dropdown menu
+********************/
 .dropDown {
     position: absolute;
     display: flex;
     background-color: var(--white);
-    box-shadow: 1px 1px 12px rgb(184, 184, 184);
+    box-shadow: 0 16px 24px 2px rgba(29,17,51,.04),0 6px 32px 4px rgba(9,32,77,.12),0 8px 12px -5px rgba(29,17,51,.12);
     border-radius: 10px;
     padding: 20px;
     width: 500px;
     top: 55px;
+    left: -20px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0s 1.5s,opacity .4s 1s;
+}
+.subMenu:hover .dropDown {
+    max-height: 500px;
+    opacity: 1;
+    transition-delay: 0s;
 }
 .dropDown ul {
     flex: 0 0 0;
 }
-.dropDown ul li {
-    width: 220px;
-    margin-right: 20px;
-}
 .dropDown li {
     margin-bottom: 20px;
     padding: 5px;
+}
+.dropDown ul li {
+    width: 220px;
+    margin-right: 20px;
 }
 .dropDown li:hover {
     background-color: rgb(243, 243, 243);
@@ -120,6 +148,284 @@ nav a:hover{
     margin-right: 5px;
 }
 .dropDown p {
-    margin: 10px 0 20px 40px;
+    margin: 10px 0 0 40px;
+    font-size: .9rem;
+    font-weight: normal;
 }
-
+/********************
+header
+********************/
+header {
+    text-align: center;
+    padding-top: 100px;
+}
+.headings {
+    width: 50%;
+    margin: auto;
+    margin-top: 40px;
+}
+header img {
+    width: 50%;
+    height: 50%;
+}
+header h1 {
+    font-size: 2.5rem;
+    margin: 40px 0;
+}
+header p {
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    line-height: 1.4;
+}
+header .small-links a {
+    color: var(--fontPrimary);
+    font-size: .8rem;
+    display: block;
+    margin-bottom: 20px;
+}
+header .small-links a:hover{
+    text-decoration: underline;
+}
+header .small-links p {
+    font-size: .8rem;
+}
+header .small-links p a {
+    color: var(--blue);
+    text-decoration: underline;
+}
+header .small-links p a:hover {
+    text-decoration: none;
+}
+.bcg-img {
+    background-image: url(img/header-bottom.png);
+    background-position: 80% 100%;
+    background-repeat: no-repeat;
+    background-size: auto 420px;
+    height: 420px;
+    position: relative;
+    z-index: -1;
+}
+.bcg-img img {
+    bottom: 0;
+    height: 337px;
+    width: 1200px;
+    position: absolute;
+    right: 5%;
+}
+/********************
+browser
+********************/
+.browser {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: var(--padding);
+    margin-bottom: 50px;
+}
+.browser .text {
+    flex: 0 0 47%;
+}
+.browser .img {
+    flex: 0 0 47%;
+}
+.browser img {
+    width: 100%;
+    height: auto;
+}
+.browser span {
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: block;
+}
+.browser h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.browser p {
+    line-height: 1.5;
+}
+/********************
+tools
+********************/
+.tools {
+    padding: var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 100px;
+}
+.tools article {
+    flex: 0 0 45%;
+    margin-bottom: 100px;
+}
+.tools img {
+    width: 100%;
+    margin-bottom: 40px;
+}
+.tools span {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+.tools h2 {
+    margin-bottom: 20px;
+}
+.tools p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.tools a {
+    text-decoration: underline;
+    color: var(--blue);
+    font-weight: bold;
+}
+.tools a:hover {
+    text-decoration: none;
+}
+/********************
+feature
+********************/
+.feature {
+    padding: var(--padding);
+}
+.feature span {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.feature h2{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 100px;
+}
+.feature .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.feature article {
+    flex: 0 0 28%;
+    margin-bottom: 100px;
+}
+.feature h3 {
+    margin: 30px 0 10px 0;
+}
+.feature p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.feature a {
+    color: var(--blue);
+    text-decoration: underline;
+    font-weight: bold;
+}
+.feature a:hover {
+    text-decoration: none;
+}
+/********************
+cta
+********************/
+.cta {
+    padding: var(--padding);
+    background:linear-gradient(#09204d,#010817);
+    color: var(--white);
+}
+.cta .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cta article {
+    flex: 0 0 45%;
+    margin: 60px 0;
+}
+.cta article:nth-child(1) {
+    display: flex;
+}
+.cta article:nth-child(2) {
+    display: flex;
+}
+.cta img {
+    margin-right: 30px;
+    display: block;
+    width: 64px;
+    height: auto;
+    align-self: flex-start;
+}
+.cta .browser-img {
+    width: 60%;
+}
+.cta h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.cta p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.cta a {
+    color: aqua;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.cta a:hover {
+    text-decoration: none;
+}
+/********************
+signUp
+********************/
+.signUp {
+    background-image: url(img/newsletter.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50px;
+}
+.signUp .row {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+}
+.signUp h3 {
+    font-size: 1.5rem;
+    margin: 10px 0 20px 0;
+}
+.signUp img {
+    flex: 0 0 12%;
+    width: 100%;
+}
+.signUp div {
+    flex: 0 0 83%;
+}
+.signUp article:first-child {
+    flex: 0 0 75%;
+    display: flex;
+    justify-content: space-between;
+}
+.signUp article:last-child {
+    flex: 0 0 25%;
+}
+.signUp input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid #9595a2;
+    margin-bottom: 20px;
+}
+.signUp input:hover {
+    border: 2px solid var(--blue);
+}
+::placeholder {
+    font-size: 1rem;
+    color: rgb(150, 150, 150);
+}
+.signUp .btn {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 0;
+}
