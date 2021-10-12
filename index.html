@@ -10,14 +10,19 @@
 <body>
 
     <!-- nav -->
-    <nav>
+    <nav id="navbar">
        <div class="container">
             <a href="" class="logo"><img src="img/logo-sm.f26fdae37f50.png" alt="">
                 Firefox
             </a>
+            <div class="btn-ham">
+                <i class="fas fa-bars"></i>
+            </div>
+            <button type="button">Get a Firefox Account</button>
             <ul>
-                <li class="subMenu"><a href="">Browsers</a>
+                <li class="subMenu">Browsers<i class="fas fa-chevron-down"></i>
                     <div class="dropDown">
+                       <div class="wrapper">
                         <ul>
                             <li>
                                 <a href="">
@@ -63,21 +68,21 @@
                                 </a>
                                 <p>Lorem ipsum dolor adipisicing elit..</p>
                             </li>
-                            <li>
+                            <li class="brd-none">
                                 <a href="">
                                     <img src="img/icon-relay.aca61c9bb349.svg" alt="">Firefox for Desktop
                                 </a>
                                 <p>Lorem ipsu Tempora, vero.</p>
                             </li>
-                            
                         </ul>
+                       </div>
                     </div>
                 </li>
-                <li><a href="">Products</a></li>
-                <li><a href="">Join</a></li>
-                <li><a href="">About</a></li>
+                <li class="subMenu">Products<i class="fas fa-chevron-down"></i></li>
+                <li class="subMenu">Join<i class="fas fa-chevron-down"></i></li>
+                <li class="subMenu">About<i class="fas fa-chevron-down"></i></li>
+        
             </ul>
-            <button type="button">Get a Firefox Account</button>
        </div>
     </nav>
 
@@ -127,21 +132,21 @@
             <img src="img/hero-debugger-ani.7e04d95e76ea.gif" alt="">
             <span>New Tools</span>
             <h2>Firefox DevTools</h2>
-            <p>Firefox DevTools now grays out CSS declarations that don’t have an effect on the page. When you hover over the info icon, you’ll see a useful message about why the CSS is not being applied, including a hint about how to fix the problem.</p>
+            <p>The new Firefox DevTools are powerful, flexible, and best of all, hackable. This includes a best-in-class JavaScript debugger, which can target multiple browsers and is built in React and Redux.</p>
             <a href="">Learn more</a>
         </article>
         <article>
             <img src="img/hero-cssgrid-ani.c0a7ace9dbf7.gif" alt="">
             <span>Innovative Features</span>
-            <h2>Inactive CSS</h2>
-            <p>Firefox DevTools now grays out CSS declarations that don’t have an effect on the page. When you hover over the info icon, you’ll see a useful message about why the CSS is not being applied, including a hint about how to fix the problem.</p>
+            <h2>Master CSS Grid</h2>
+            <p>Firefox is the only browser with tools built specifically for building and designing with CSS Grid. These tools allow you to visualize the grid, display associated area names, preview transformations on the grid and much more.</p>
             <a href="">Learn more</a>
         </article>
         <article>
             <img src="img/hero-fonts.0e574b98aa63.gif" alt="">
             <span>Faster Information</span>
             <h2>Fonts Panel</h2>
-            <p>Firefox DevTools now grays out CSS declarations that don’t have an effect on the page. When you hover over the info icon, you’ll see a useful message about why the CSS is not being applied, including a hint about how to fix the problem.</p>
+            <p>The new fonts panel in Firefox DevTools gives developers quick access to all of the information they need about the fonts being used in an element. It also includes valuable information such as the font source, weight, style and more.</p>
             <a href="">Learn more</a>
         </article>
     </section>
@@ -219,7 +224,9 @@
     <section class="cta">
         <div class="container">
             <article>
+               <div>
                 <img src="img/icon-speak.0875f09b2010.svg" alt="">
+               </div>
                 <div>
                     <h3>Speak up</h3>
                     <p>Feedback makes us better. Tell us how we can improve the browser and Developer tools.</p>
@@ -318,6 +325,40 @@
             </article>
         </div>
     </footer>
+
+     <!-- popup -->
+     <aside class="popup">
+        <div class="pop-up-promo">
+            <button type="button" class="btn-promo">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="promo-products">
+                <h3>Meet our family of products</h3>
+                <ul>
+                    <li>
+                        <a href="">
+                            <img src="img/logo-sm.f26fdae37f50.png" alt="">
+                            Browsers
+                        </a>
+                        <a href="">
+                            <img src="img/logo-sm.0bc3e6ae9d32.png" alt="">
+                            Monitor
+                        </a>
+                        <a href="">
+                            <img src="img/logo.17446bc33a5d.svg" alt="">
+                            Pocket
+                        </a>
+                        <a href="">
+                            <img src="img/logo-sm.e1fa6f7b3a8a.png" alt="">
+                            Mozilla VPN
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    
+    <!-- bottom-bar -->
     <div class="bottom-bar">
         <div class="container">
             <article>
